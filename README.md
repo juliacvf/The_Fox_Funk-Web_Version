@@ -1,37 +1,52 @@
-# The Fox Funk — navegador
+# Pygame_Dev-Life
 
-Esta pasta contém a versão web do jogo. O jogo para computador continua separado em `26-2-devlife-pygame-Branco`, e o site de apresentação continua em `26-2-devlife-pygame-site-Branco`.
+Jogo para computador feito com Python e Pygame em um projeto em dupla da turma de ciência da computação.
 
-## Testar
+## The Fox Funk
 
-Abra `Jogar no navegador.cmd` nesta pasta e mantenha a janela do servidor aberta enquanto joga. Acesse <http://127.0.0.1:8000> e clique no jogo para liberar o áudio.
+Entre no ritmo, sinta a batida, e desafie seus amigos em uma batalha ANIMAL
 
-Se já houver uma janela do servidor antigo aberta, feche-a antes de iniciar esta versão.
+## Como jogar
 
-O primeiro carregamento precisa de internet para buscar o runtime do Pygbag e carregar aproximadamente 130 MB do jogo.
+escolha entre 100 músicas dos mais diversos tipos e 9 skins diferentes.
+Desafie um amigo e descubram quem possui o melhor ritmo. 
+Faça de tudo para entrar no ranking dos vencedores e fuja do ranking dos perdedores!
 
-Também é possível iniciar manualmente, a partir desta pasta:
+# Poderes
+O jogo possui quatro poderes que vêm aleatoriamente para você atrapalhar seu adversário:
+
+TINTA NO FOCINHO: Derrama manchas de tinta na tela do outro atrapalhando sua visão
+
+CONTROLES INVERTIDOS: Inverte os controles do adversário
+
+RAPOSA LADRÃO: Rouba parte da barra de poder do adversário e remove seu poder ativo
+
+RAIO DA VELOCIDADE: Acelera as notas do adversário 3 vezes mais rápido
+
+# Controles
+O jogo pode ser jogado ambos no teclado, teclado e controle, ou dois controles
+
+jogador 1: WASD para tocar e E para lançar o poder
+
+jogador 2: SETAS para tocar e ENTER para lançar o poder
+
+Controle: AXYB ou direcionais para tocar e RT ou LT para lançar o poder
+
+## Executar
+
+Instale o Pygame, abra o terminal nesta pasta e execute:
 
 ```console
-python -m http.server 8000 --bind 127.0.0.1
+python codigo/jogo.py
 ```
 
-## Publicar no GitHub Pages
+Mantenha as pastas `codigo`, `efeitos`, `fontes`, `musicas`, `ranking` e `sprites` nesta estrutura. O ranking local fica nos arquivos da pasta `ranking`.
 
-Envie esta pasta para um repositório próprio, mantendo na raiz `index.html`, `favicon.png`, `.nojekyll` e a pasta `dados` com suas sete partes.
+## Créditos
 
-No GitHub, selecione **Settings → Pages → Deploy from a branch → main → /(root)** e salve. Use o nome correto da branch principal caso não seja `main`.
+Grupo Branco:
+Julia de Carvalho Vexel Fontes
+Nathan Loose Kuipper
 
-O navegador reúne as partes automaticamente. Não é necessário enviar `versao_web/build`, que contém os pacotes grandes e está ignorado pelo Git.
-
-## Atualizar o jogo
-
-Os fontes adaptados ao Pygbag estão em `versao_web`. As mudanças feitas no jogo para computador não são copiadas automaticamente: precisam ser incorporadas nessa versão e compiladas conforme seu README.
-
-Após compilar, execute nesta pasta:
-
-```console
-python versao_web/preparar_pages.py
-```
-
-Isso atualiza a publicação aqui, sem escrever na pasta do jogo para computador.
+Jogo feito com todas as sprites (com excessão dos fundos) feitas na mão
+Músicas das telas também produzidas orgânicamente
