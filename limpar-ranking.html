@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Limpar ranking — The Fox Funk</title>
+</head>
+<body>
+    <p id="status" role="status">Limpando o ranking…</p>
+    <script>
+        // Usa o mesmo endereço do jogo para limpar somente o ranking deste navegador.
+        if (location.protocol === 'file:') {
+            document.getElementById('status').textContent =
+                'Abra o jogo pelo servidor e acesse /limpar-ranking.html no mesmo endereço.';
+        } else {
+            try {
+                const chave = 'the-fox-funk-ranking-v1';
+                const anterior = localStorage.getItem(chave);
+                // Guarda uma cópia recuperável, sem interferir nos dados usados pelo jogo.
+                if (anterior !== null) {
+                    localStorage.setItem('the-fox-funk-ranking-backup-ultima-limpeza', anterior);
+                }
+                localStorage.removeItem(chave);
+                location.replace('./?ranking-limpo=1');
+            } catch (erro) {
+                document.getElementById('status').textContent =
+                    'Não foi possível limpar o ranking. Verifique se o navegador permite armazenar dados deste site.';
+            }
+        }
+    </script>
+</body>
+</html>

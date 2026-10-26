@@ -1,0 +1,35 @@
+# Cache e arquivos compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Variáveis de ambiente e configurações locais
+.env
+.env.*
+!.env.example
+
+# Arquivos de distribuição e instalação
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Cache de testes e ferramentas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Repositório vazio criado dentro desta pasta; não faz parte do jogo publicado.
+/The_Fox_Funk-Web_Version/
